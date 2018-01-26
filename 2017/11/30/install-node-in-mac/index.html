@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/style/style.css">
+<script>
+    var NlviConfig = {
+        title: "Personal Blog",
+        author: "Shangwei Yin",
+        theme: "banderole",
+        lightbox: true,
+        animate: true,
+        baseUrl: "/",
+        search: false
+    }
+</script>
+
+
+
+    <link rel="stylesheet" href="/script/lib/lightbox/css/lightbox.min.css">
+
+
+
+
+    <link rel="stylesheet" href="/syuanpi/syuanpi.min.css">
+
+
+
+
+    <link rel="icon" href="img/favicon.png">
+
+
+
+
+
+
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="browsermode" content="application">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Personal Blog">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="msapplication-navbutton-color" content="#666666">
+<meta name= "format-detection" content="telephone=no" />
+<meta name="keywords" content="nlvi, Nlvi" />
+
+  <link rel="apple-touch-icon"  sizes="72x72"  href="img/favicon.png">
+  <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="img/favicon.png">
+
+
+  <meta name="subtitle" content="以梦为马，负了昭华">
+
+
+  <meta name="description" content="个人博客">
+
+
+  <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,ShadowSocks,ReactNative" />
+
+
+  <meta name="keywords" content="nvm, node, Nlvi" />
+
+  <title> 如何正确的安装nvm、node(mac) · Personal Blog </title>
+</head>
+<body>
+  <div class="progress">
+  <div class="progress-inner"></div>
+</div>
+  
+  
+    <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/tags/ShadowSocks/" style="font-size: 14px;">ShadowSocks</a> <a href="/tags/markdown/" style="font-size: 14px;">markdown</a> <a href="/tags/node/" style="font-size: 14px;">node</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/react-native/" style="font-size: 14px;">react native</a>
+  </div>
+</div>  
+  
+
+  <div class="container">
+
+    <header class="header" id="header">
+  <div class="header-wrapper">
+    <div class="logo">
+  <div class="logo-inner syuanpi tvIn">
+    <span><a href="/">Personal Blog</a></span>
+    
+      <span id="subtitle">以梦为马，负了昭华</span>
+    
+  </div>
+</div>
+    <nav class="main-nav">
+        
+  <ul class="main-nav-list syuanpi tvIn">
+  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/" id="article">
+        <span class="base-name">Article</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/archives" id="archives">
+        <span class="base-name">Archives</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="javascript:;" id="tags">
+        <span class="base-name">Tags</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/about" id="about">
+        <span class="base-name">About Me</span>
+        
+      </a>
+    </li>  
+  
+  </ul>
+  
+</nav>
+    
+    
+  </div>
+</header>
+<div class="mobile-header">
+  <div class="mobile-header-body">
+    <div class="mobile-header-list">
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/">
+                    <span>Article</span>
+                    
+                    
+                </a>
+            </div>
+        
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/archives">
+                    <span>Archives</span>
+                    
+                    
+                </a>
+            </div>
+        
+      
+        
+          <div class="mobile-nav-item inner-cloud">
+            <div class="mobile-nav-tag">
+              <a href="javascript:;" id="mobile-tags">
+                <span>Tags</span>
+                
+                
+              </a>
+            </div>
+            <div class="mobile-nav-tagcloud">
+              <div class="mobile-tagcloud-inner">
+                <a href="/tags/ShadowSocks/" style="font-size: 14px;">ShadowSocks</a> <a href="/tags/markdown/" style="font-size: 14px;">markdown</a> <a href="/tags/node/" style="font-size: 14px;">node</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/react-native/" style="font-size: 14px;">react native</a>
+              </div>
+            </div>
+          </div>
+        
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/about">
+                    <span>About Me</span>
+                    
+                    
+                </a>
+            </div>
+        
+      
+    </div>
+  </div>
+  <div class="mobile-header-nav">
+    <div class="mobile-header-item" id="mobile-left">
+      <div class="header-menu-item">
+        <span class="header-menu-line"></span>
+      </div>
+    </div>
+    <h1 class="mobile-header-title">
+      <a href="/">Personal Blog</a>
+    </h1>
+    <div class="mobile-header-item"></div>
+  </div>
+</div>
+    <div class="container-inner">
+      <main class="main" id="main">
+        <div class="main-wrapper">
+          
+    
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi riseIn-light back-1">
+        <div class="post-time-wrapper">
+          <span>2017-11-30</span>
+          
+            
+              <span class="post-category"><a href="/categories/Tools/">Tools</a></span>
+            
+          
+          
+            
+              <aside class="post-tags syuanpi riseIn-light back-3">
+              
+                <a href="/tags/nvm/">nvm</a>
+              
+                <a href="/tags/node/">node</a>
+              
+              </aside>
+            
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi riseIn-light back-2">
+        
+          如何正确的安装nvm、node(mac)
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi riseIn-light back-3">
+      
+        <p><img src="/img/2017-11-30-nvm.png" alt="image"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这里主要介绍mac的安装（linux可以参照），windows系统的话可以参考<a href="https://cnodejs.org/topic/5338c5db7cbade005b023c98" target="_blank" rel="noopener">windows安装</a>。</p>
+<p>在mac中我们经常会使用homebrew安装一些软件，但是使用homebrew安装nvm<code>brew install nvm</code>后可能会出现错误：<strong>nvm is not compatible with the npm config “prefix” option</strong>。</p>
+<p>至于为什么用homebrew安装会出现这个问题，可以参考github上的一个<a href="https://github.com/creationix/nvm/issues/855" target="_blank" rel="noopener">issue</a>。<br>使用homebrew安装nvm已经是官方不推荐的做法，在nvm的<a href="https://github.com/creationix/nvm#installation" target="_blank" rel="noopener">github文档</a>上也有明确的说明：</p>
+<blockquote>
+<p>Homebrew installation is not supported. If you have issues with homebrew-installed nvm, please brew uninstall it, and install it using the instructions below, before filing an issue.</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><p>一、<strong>卸载nvm、node</strong><br>如果你使用了homebrew安装过nvm和node，请先卸载掉。<br><code>brew list</code> #查看brew本地安装包<br><code>brew uninstall nvm</code> #卸载nvm<br><code>brew uninstall node</code> #卸载node</p>
+<p>二、<strong>卸载已安装到全局的npm、node</strong><br><code>sudo rm -rf /usr/local/lib/node_modules</code> #删除全局node_modules目录<br><code>sudo rm /usr/local/bin/node</code> #删除node<br><code>cd  /usr/local/bin &amp;&amp; ls -l | grep &quot;../lib/node_modules/&quot; | awk &#39;{print $9}&#39;| xargs rm</code> #删除全局node模块注册的软链</p>
+<p>三、<strong>安装nvm</strong><br><code>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash</code> 或者<br><code>wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash</code><br>安装完成之后可以执行<code>nvm --version</code>查看nvm版本号</p>
+<p>四、<strong>安装node</strong><br><code>nvm install node</code> #安装最新版node<br><code>nvm use node</code> #指定使用最新版node<br><code>nvm alias default &lt;version&gt;</code> #指定node的默认版本号<br><code>nvm list</code> #查看nvm的安装信息（也可以用nvm ls替代nvm list）</p>
+<p>五、<strong>常用命令</strong><br><code>nvm ls-remote</code> #列出远程服务器所有的node版本<br><code>nvm ls</code> #列出本地所有安装的node版本<br><code>nvm install &lt;version&gt;</code> #安装指定版本<br><code>nvm install  --lts</code> #安装最新稳定版node<br><code>nvm uninstall &lt;version&gt;</code> #删除已安装的指定版本<br><code>nvm use &lt;version&gt;</code> #切换使用指定的node版本<br><code>nvm use --lts</code> #指定使用最新稳定版node<br><code>nvm current</code> #显示当前的node版本<br><code>nvm alias &lt;name&gt; &lt;version&gt;</code> #给不同的版本号添加别名<br><code>nvm unalias &lt;name&gt;</code> #删除已定义的别名<br><code>nvm reinstall-packages &lt;version&gt;</code> #在当前版本node环境下，重新全局安装指定版本号的npm包<br><code>npm ls -g --depth=0</code> #查看已经安装在全局的模块</p>
+
+      
+    
+    </div>
+    
+      
+      
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+      <a href="/2018/01/25/setup-your-own-shadowsocks/" id="art-left" class="art-left">
+        <span class="next-title">
+          <i class="iconfont icon-left"></i>如何搭建自己的专属ShadowSocks
+        </span>
+      </a>
+    
+    
+      <a href="/2017/11/24/About-RawText-Error/" id="art-right" class="art-right">
+        <span class="prev-title"> 
+          关于React Native中【根据变量的值是否为空来控制组件的显示与否】的问题小结<i class="iconfont icon-right"></i>  
+        </span>
+      </a>
+    
+  </nav>
+
+    
+
+  
+   
+    
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>Index</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">如何正确的安装nvm、node(mac)</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装步骤"><span class="toc-text">安装步骤</span></a></li></ol>
+    </div>
+  </aside>
+
+
+  
+
+
+        </div>
+      </main>
+
+      <footer class="footer syuanpi fadeIn" id="footer">
+  <hr>
+  <div class="footer-wrapper">
+    <div class="left">
+      <div class="contact-icon">
+    
+    
+    
+    
+    
+    
+    
+    
+        
+            <a href="https://github.com/yinshangwei" class="iconfont icon-github" title="github"></a>
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            <a href="https://weibo.com/yinshangwei" class="iconfont icon-weibo" title="weibo"></a>
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            <a href="https://www.facebook.com/yinshangwei" class="iconfont icon-facebook" title="facebook"></a>
+        
+        
+        
+    
+</div>
+    </div>
+    <div class="right">
+      <div class="copyright">
+    <div class="info">
+        <span>&copy;</span>
+        <span>2017 ~ 2018</span>
+        <span>❤</span>
+        <span>Shangwei Yin</span>
+    </div>
+    <!--
+    <div class="theme">
+        <span>
+            Powered by
+            <a href="http://hexo.io/" target="_blank">Hexo </a>
+        </span>
+        <span>
+            Theme
+            <a href="https://github.com/ColMugX/hexo-theme-Nlvi"> Nlvi </a>
+        </span>
+    </div>
+    -->
+    
+</div>
+    </div>
+  </div>
+</footer>
+    </div>
+  </div>
+  <script src="/script/lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+    <script src="/script/lib/lightbox/js/lightbox.min.js"></script>
+
+
+
+
+
+
+<script src="/script/src/nlvi.js"></script>
+<script src="/script/src/utils.js"></script>
+<script src="/script/scheme/balance.js"></script>
+<script src="/script/src/plugins.js"></script>
+<script src="/script/bootstarp.js"></script>
+
+
+<div class="backtop syuanpi dead toTop" id="backtop">
+    <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+</div>
+
+
+</body>
+</html>

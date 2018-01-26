@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/style/style.css">
+<script>
+    var NlviConfig = {
+        title: "Personal Blog",
+        author: "Shangwei Yin",
+        theme: "banderole",
+        lightbox: true,
+        animate: true,
+        baseUrl: "/",
+        search: false
+    }
+</script>
+
+
+
+    <link rel="stylesheet" href="/script/lib/lightbox/css/lightbox.min.css">
+
+
+
+
+    <link rel="stylesheet" href="/syuanpi/syuanpi.min.css">
+
+
+
+
+    <link rel="icon" href="img/favicon.png">
+
+
+
+
+
+
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="browsermode" content="application">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Personal Blog">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="msapplication-navbutton-color" content="#666666">
+<meta name= "format-detection" content="telephone=no" />
+<meta name="keywords" content="nlvi, Nlvi" />
+
+  <link rel="apple-touch-icon"  sizes="72x72"  href="img/favicon.png">
+  <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="img/favicon.png">
+
+
+  <meta name="subtitle" content="以梦为马，负了昭华">
+
+
+  <meta name="description" content="个人博客">
+
+
+  <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验,ShadowSocks,ReactNative" />
+
+
+  <meta name="keywords" content="ShadowSocks, Nlvi" />
+
+  <title> 如何搭建自己的专属ShadowSocks · Personal Blog </title>
+</head>
+<body>
+  <div class="progress">
+  <div class="progress-inner"></div>
+</div>
+  
+  
+    <div class="tagcloud-mask"></div>  
+<div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-inner">
+    <a href="/tags/ShadowSocks/" style="font-size: 14px;">ShadowSocks</a> <a href="/tags/markdown/" style="font-size: 14px;">markdown</a> <a href="/tags/node/" style="font-size: 14px;">node</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/react-native/" style="font-size: 14px;">react native</a>
+  </div>
+</div>  
+  
+
+  <div class="container">
+
+    <header class="header" id="header">
+  <div class="header-wrapper">
+    <div class="logo">
+  <div class="logo-inner syuanpi tvIn">
+    <span><a href="/">Personal Blog</a></span>
+    
+      <span id="subtitle">以梦为马，负了昭华</span>
+    
+  </div>
+</div>
+    <nav class="main-nav">
+        
+  <ul class="main-nav-list syuanpi tvIn">
+  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/" id="article">
+        <span class="base-name">Article</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/archives" id="archives">
+        <span class="base-name">Archives</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="javascript:;" id="tags">
+        <span class="base-name">Tags</span>
+        
+      </a>
+    </li>  
+  
+    
+      
+    
+    <li class="menu-item">
+      <a href="/about" id="about">
+        <span class="base-name">About Me</span>
+        
+      </a>
+    </li>  
+  
+  </ul>
+  
+</nav>
+    
+    
+  </div>
+</header>
+<div class="mobile-header">
+  <div class="mobile-header-body">
+    <div class="mobile-header-list">
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/">
+                    <span>Article</span>
+                    
+                    
+                </a>
+            </div>
+        
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/archives">
+                    <span>Archives</span>
+                    
+                    
+                </a>
+            </div>
+        
+      
+        
+          <div class="mobile-nav-item inner-cloud">
+            <div class="mobile-nav-tag">
+              <a href="javascript:;" id="mobile-tags">
+                <span>Tags</span>
+                
+                
+              </a>
+            </div>
+            <div class="mobile-nav-tagcloud">
+              <div class="mobile-tagcloud-inner">
+                <a href="/tags/ShadowSocks/" style="font-size: 14px;">ShadowSocks</a> <a href="/tags/markdown/" style="font-size: 14px;">markdown</a> <a href="/tags/node/" style="font-size: 14px;">node</a> <a href="/tags/nvm/" style="font-size: 14px;">nvm</a> <a href="/tags/react-native/" style="font-size: 14px;">react native</a>
+              </div>
+            </div>
+          </div>
+        
+      
+        
+            <div class="mobile-nav-item">
+                <a href="/about">
+                    <span>About Me</span>
+                    
+                    
+                </a>
+            </div>
+        
+      
+    </div>
+  </div>
+  <div class="mobile-header-nav">
+    <div class="mobile-header-item" id="mobile-left">
+      <div class="header-menu-item">
+        <span class="header-menu-line"></span>
+      </div>
+    </div>
+    <h1 class="mobile-header-title">
+      <a href="/">Personal Blog</a>
+    </h1>
+    <div class="mobile-header-item"></div>
+  </div>
+</div>
+    <div class="container-inner">
+      <main class="main" id="main">
+        <div class="main-wrapper">
+          
+    
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi riseIn-light back-1">
+        <div class="post-time-wrapper">
+          <span>2018-01-25</span>
+          
+            
+              <span class="post-category"><a href="/categories/Tools/">Tools</a></span>
+            
+          
+          
+            
+              <aside class="post-tags syuanpi riseIn-light back-3">
+              
+                <a href="/tags/ShadowSocks/">ShadowSocks</a>
+              
+              </aside>
+            
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi riseIn-light back-2">
+        
+          如何搭建自己的专属ShadowSocks
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi riseIn-light back-3">
+      
+        <p><img src="/img/2018-01-25-shadowsocks.png" alt="image"></p>
+<h2 id="购买VPS服务器"><a href="#购买VPS服务器" class="headerlink" title="购买VPS服务器"></a>购买VPS服务器</h2><p>如果你想拥有自己的专属网络用来<a href="http://ju.outofmemory.cn/entry/108589" target="_blank" rel="noopener">科学上网</a>，首先你需要购买一台VPS服务器。<br>市面上这样的产品也非常多，可以参考<a href="http://www.zrblog.net/category/vps-2/offers" target="_blank" rel="noopener">VPS优惠信息</a>。<br>VPS服务器的架构一般有两种<a href="https://clientarea.ramnode.com/knowledgebase.php?action=displayarticle&amp;id=52" target="_blank" rel="noopener">OpenVZ和KVM</a>，建议选择KVM服务器，比较稳定并且可定制化程度更高。<br><a id="more"></a></p>
+<h2 id="配置VPS服务器"><a href="#配置VPS服务器" class="headerlink" title="配置VPS服务器"></a>配置VPS服务器</h2><p>购买服务器后，一般会收到关于服务器的基本信息（ip address, username, password等）。<br>然后通过<code>ssh username@ip_address</code>命令进入到我们的服务器，需要输入password。<br>首次进入到服务器后，建议通过<code>passwd</code>命令来修改初始password。<br>如果不想每次ssh进入服务器的时候都输入密码，可以把本机<code>.ssh/id_rsa.pub</code>公钥写入到服务器的<code>.ssh/authorized_keys</code>中（没有该文件就创建），然后修改本机的<code>.ssh/config</code>文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Host *</span><br><span class="line"> AddKeysToAgent yes</span><br><span class="line"> UseKeychain yes</span><br><span class="line"> IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">Host server_name</span><br><span class="line"> Hostname ip_address</span><br><span class="line"> Port port</span><br><span class="line"> User username</span><br></pre></td></tr></table></figure></p>
+<p>完成之后，可以直接输入<code>ssh server_name</code>(不需要输入ip address)进入到服务器而不需要输入密码。<br><br></p>
+<h2 id="安装ShadowSocks"><a href="#安装ShadowSocks" class="headerlink" title="安装ShadowSocks"></a>安装ShadowSocks</h2><ul>
+<li><p>什么是ShadowSocks</p>
+<blockquote>
+<p>ShadowSocks是一种socks5的代理，而socks5的代理服务器则是把你的网络数据请求通过一条连接你和代理服务器之间的通道，由服务器转发到目的地。你没有加入任何新的网络，只是http/socks数据经过代理服务器的转发送出，并从代理服务器接收回应。</p>
+</blockquote>
+</li>
+<li><p>下载并安装shell脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br><span class="line">./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>** 输入ShadowSocks密码，需要记住</p>
+<ul>
+<li>输入端口号，默认为<code>8989</code></li>
+<li><p>选择加密方式，默认为<code>aes-256-gcm</code>，建议修改为<code>7）aes-256-cfb</code></p>
+</li>
+<li><p>常用命令</p>
+<blockquote>
+<p>启动：/etc/init.d/shadowsocks start<br>停止：/etc/init.d/shadowsocks stop<br>重启：/etc/init.d/shadowsocks restart<br>状态：/etc/init.d/shadowsocks status<br>卸载：./shadowsocks.sh uninstall</p>
+</blockquote>
+</li>
+<li><p>配置文件</p>
+<blockquote>
+<p>配置文件路径：/etc/shadowsocks.json</p>
+</blockquote>
+</li>
+<li><p>单用户配置：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>:<span class="string">"0.0.0.0"</span>,</span><br><span class="line">    <span class="attr">"server_port"</span>:<span class="number">8989</span>,</span><br><span class="line">    <span class="attr">"local_address"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>:<span class="number">1080</span>,</span><br><span class="line">    <span class="attr">"password"</span>:<span class="string">"password"</span>,</span><br><span class="line">    <span class="attr">"timeout"</span>:<span class="number">300</span>,</span><br><span class="line">    <span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span>,</span><br><span class="line">    <span class="attr">"fast_open"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多用户配置：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>:<span class="string">"0.0.0.0"</span>,</span><br><span class="line">    <span class="attr">"local_address"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>:<span class="number">1080</span>,</span><br><span class="line">    <span class="attr">"port_password"</span>:&#123;</span><br><span class="line">         <span class="attr">"8989"</span>:<span class="string">"password0"</span>,</span><br><span class="line">         <span class="attr">"9001"</span>:<span class="string">"password1"</span>,</span><br><span class="line">         <span class="attr">"9002"</span>:<span class="string">"password2"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"timeout"</span>:<span class="number">300</span>,</span><br><span class="line">    <span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span>,</span><br><span class="line">    <span class="attr">"fast_open"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h2 id="安装ShadowSocks客户端"><a href="#安装ShadowSocks客户端" class="headerlink" title="安装ShadowSocks客户端"></a>安装ShadowSocks客户端</h2><ul>
+<li><p><a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="noopener">Windows ShadowSocks客户端</a></p>
+</li>
+<li><p><a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases" target="_blank" rel="noopener">Mac OSX ShadowSocks客户端</a></p>
+</li>
+<li><p><a href="https://github.com/shadowsocks/shadowsocks-android/releases" target="_blank" rel="noopener">Android ShadowSocks客户端</a></p>
+</li>
+<li><p>IOS ShadowSocks客户端（在Apple Store搜索wingy，如FirstWingy、SuperWingy等都可以）</p>
+</li>
+</ul>
+
+      
+    
+    </div>
+    
+      
+      
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+    
+      <a href="/2017/11/30/install-node-in-mac/" id="art-right" class="art-right">
+        <span class="prev-title"> 
+          如何正确的安装nvm、node(mac)<i class="iconfont icon-right"></i>  
+        </span>
+      </a>
+    
+  </nav>
+
+    
+
+  
+   
+    
+  
+  <aside class="post-toc">
+    <span class="title" id="toc-switch"><span>Index</span></span>
+    <div class="toc-inner syuanpi back-1 fallIn-light">
+      <li class="title-link"><a href="javascript:;" class="toTop">如何搭建自己的专属ShadowSocks</a></li>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#购买VPS服务器"><span class="toc-text">购买VPS服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置VPS服务器"><span class="toc-text">配置VPS服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装ShadowSocks"><span class="toc-text">安装ShadowSocks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装ShadowSocks客户端"><span class="toc-text">安装ShadowSocks客户端</span></a></li></ol>
+    </div>
+  </aside>
+
+
+  
+
+
+        </div>
+      </main>
+
+      <footer class="footer syuanpi fadeIn" id="footer">
+  <hr>
+  <div class="footer-wrapper">
+    <div class="left">
+      <div class="contact-icon">
+    
+    
+    
+    
+    
+    
+    
+    
+        
+            <a href="https://github.com/yinshangwei" class="iconfont icon-github" title="github"></a>
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            <a href="https://weibo.com/yinshangwei" class="iconfont icon-weibo" title="weibo"></a>
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            <a href="https://www.facebook.com/yinshangwei" class="iconfont icon-facebook" title="facebook"></a>
+        
+        
+        
+    
+</div>
+    </div>
+    <div class="right">
+      <div class="copyright">
+    <div class="info">
+        <span>&copy;</span>
+        <span>2017 ~ 2018</span>
+        <span>❤</span>
+        <span>Shangwei Yin</span>
+    </div>
+    <!--
+    <div class="theme">
+        <span>
+            Powered by
+            <a href="http://hexo.io/" target="_blank">Hexo </a>
+        </span>
+        <span>
+            Theme
+            <a href="https://github.com/ColMugX/hexo-theme-Nlvi"> Nlvi </a>
+        </span>
+    </div>
+    -->
+    
+</div>
+    </div>
+  </div>
+</footer>
+    </div>
+  </div>
+  <script src="/script/lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+    <script src="/script/lib/lightbox/js/lightbox.min.js"></script>
+
+
+
+
+
+
+<script src="/script/src/nlvi.js"></script>
+<script src="/script/src/utils.js"></script>
+<script src="/script/scheme/balance.js"></script>
+<script src="/script/src/plugins.js"></script>
+<script src="/script/bootstarp.js"></script>
+
+
+<div class="backtop syuanpi dead toTop" id="backtop">
+    <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+</div>
+
+
+</body>
+</html>
