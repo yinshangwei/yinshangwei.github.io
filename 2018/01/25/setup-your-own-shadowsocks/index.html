@@ -243,15 +243,13 @@
     <div class="post-content syuanpi riseIn-light back-3">
       
         <p><img src="/img/2018-01-25-shadowsocks.png" alt="image"></p>
+<blockquote>
+<p>ShadowSocks是一种socks5的代理，而socks5的代理服务器则是把你的网络数据请求通过一条连接你和代理服务器之间的通道，由服务器转发到目的地。你没有加入任何新的网络，只是http/socks数据经过代理服务器的转发送出，并从代理服务器接收回应。下面就介绍一下如何搭建ShadowSocks，以及搭建完后的网速优化。</p>
+</blockquote>
 <h2 id="购买VPS服务器"><a href="#购买VPS服务器" class="headerlink" title="购买VPS服务器"></a>购买VPS服务器</h2><p>如果你想拥有自己的专属网络用来<a href="http://ju.outofmemory.cn/entry/108589" target="_blank" rel="noopener">科学上网</a>，首先你需要购买一台VPS服务器。<br>市面上这样的产品也非常多，可以参考<a href="http://www.zrblog.net/category/vps-2/offers" target="_blank" rel="noopener">VPS优惠信息</a>。<br>VPS服务器的架构一般有两种<a href="https://clientarea.ramnode.com/knowledgebase.php?action=displayarticle&amp;id=52" target="_blank" rel="noopener">OpenVZ和KVM</a>，建议选择KVM服务器，比较稳定并且可定制化程度更高。<br><a id="more"></a></p>
 <h2 id="配置VPS服务器"><a href="#配置VPS服务器" class="headerlink" title="配置VPS服务器"></a>配置VPS服务器</h2><p>购买服务器后，一般会收到关于服务器的基本信息（ip address, username, password等）。<br>然后通过<code>ssh username@ip_address</code>命令进入到我们的服务器，需要输入password。<br>首次进入到服务器后，建议通过<code>passwd</code>命令来修改初始password。<br>如果不想每次ssh进入服务器的时候都输入密码，可以把本机<code>.ssh/id_rsa.pub</code>公钥写入到服务器的<code>.ssh/authorized_keys</code>中（没有该文件就创建），然后修改本机的<code>.ssh/config</code>文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Host *</span><br><span class="line"> AddKeysToAgent yes</span><br><span class="line"> UseKeychain yes</span><br><span class="line"> IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">Host server_name</span><br><span class="line"> Hostname ip_address</span><br><span class="line"> Port port</span><br><span class="line"> User username</span><br></pre></td></tr></table></figure></p>
 <p>完成之后，可以直接输入<code>ssh server_name</code>(不需要输入ip address)进入到服务器而不需要输入密码。<br><br></p>
 <h2 id="安装ShadowSocks"><a href="#安装ShadowSocks" class="headerlink" title="安装ShadowSocks"></a>安装ShadowSocks</h2><ul>
-<li><p>什么是ShadowSocks</p>
-<blockquote>
-<p>ShadowSocks是一种socks5的代理，而socks5的代理服务器则是把你的网络数据请求通过一条连接你和代理服务器之间的通道，由服务器转发到目的地。你没有加入任何新的网络，只是http/socks数据经过代理服务器的转发送出，并从代理服务器接收回应。</p>
-</blockquote>
-</li>
 <li><p>下载并安装shell脚本</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br><span class="line">./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</span><br></pre></td></tr></table></figure>
 <ul>
