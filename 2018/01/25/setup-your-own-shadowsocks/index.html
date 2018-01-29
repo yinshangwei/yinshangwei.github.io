@@ -288,6 +288,49 @@
 <li><p>IOS ShadowSocks客户端（在Apple Store搜索wingy，如FirstWingy、SuperWingy等都可以）</p>
 </li>
 </ul>
+<blockquote>
+<p>安装完ShadowSocks客户端，输入ip address、port、encryption、password就可以科学上网了。</p>
+</blockquote>
+<p><br></p>
+<h2 id="测试VPS网速"><a href="#测试VPS网速" class="headerlink" title="测试VPS网速"></a>测试VPS网速</h2><p>现在我们可以科学上网了，但是我想知道我自己搭建的ShadowSocks的网速，那么就可以用speedtest来进行测试。</p>
+<ul>
+<li><p>安装speedtest脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py</span><br><span class="line">chmod +x speedtest.py</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./speedtest.py</span><br></pre></td></tr></table></figure>
+<p>  系统会自动判断你服务器所在位置，并找到最近的节点进行测速。<br>  你的VPS服务器可能在国外，如果你想测试一下到中国的网速，可以使用<code>--server</code>参数来指定节点。<br>  搜索想要测试的<a href="http://www.speedtest.net/speedtest-servers-static.php" target="_blank" rel="noopener">节点地址</a>，找到其中的节点id，加在<code>--server</code>参数后面就可以了。<br>  例：北京电信的id是<code>4751</code>，可以使用<code>./speedtest.py --server 4751</code>来测试。</p>
+</li>
+</ul>
+<blockquote>
+<p>如果你测试的网速不是很理想，可以查看下面的【优化VPS网速】。</p>
+</blockquote>
+<p><br></p>
+<h2 id="优化VPS网速"><a href="#优化VPS网速" class="headerlink" title="优化VPS网速"></a>优化VPS网速</h2><p>Google已经开源了其TCP BBR拥塞控制算法，并提交到了Linux内核，从 4.9 开始，Linux内核已经用上了该算法。Github上有人已经开发了一键安装最新内核并开启TCP BBR的脚本，亲测可用。</p>
+<ul>
+<li><p>脚本适用环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">系统支持：CentOS 6+，Debian 7+，Ubuntu 12+</span><br><span class="line">虚拟技术：OpenVZ 以外的，比如 KVM、Xen、VMware等</span><br><span class="line">内存要求：≥128M</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
+<p>  安装完成后，脚本会提示需要重启VPS，输入<code>y</code>并回车后重启。</p>
+</li>
+<li><p>验证安装结果<br>  重启完成后，进入VPS，验证一下是否成功安装最新内核并开启TCP BBR。</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure>
+<p>  查看内核版本，返回值含4.13或以上就表示OK了</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.ipv4.tcp_available_congestion_control</span><br></pre></td></tr></table></figure>
+<p>  返回值一般为：net.ipv4.tcp_available_congestion_control = bbr cubic reno</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.ipv4.tcp_congestion_control</span><br></pre></td></tr></table></figure>
+<p>  返回值一般为：net.ipv4.tcp_congestion_control = bbr</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.core.default_qdisc</span><br></pre></td></tr></table></figure>
+<p>  返回值一般为：net.core.default_qdisc = fq</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr</span><br></pre></td></tr></table></figure>
+<p>  返回值有 tcp_bbr 模块即说明 bbr 已启动。<font color="red">注意：并不是所有的 VPS 都会有此返回值，若没有也属正常。</font></p>
+</li>
+</ul>
+<blockquote>
+<p>安装完成之后，可以再次使用speedtest来测试一下网速，对比之前的测试结果，网速是不是有所提升呢？</p>
+</blockquote>
 
       
     
@@ -350,7 +393,7 @@
     <span class="title" id="toc-switch"><span>Index</span></span>
     <div class="toc-inner syuanpi back-1 fallIn-light">
       <li class="title-link"><a href="javascript:;" class="toTop">如何搭建自己的专属ShadowSocks</a></li>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#购买VPS服务器"><span class="toc-text">购买VPS服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置VPS服务器"><span class="toc-text">配置VPS服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装ShadowSocks"><span class="toc-text">安装ShadowSocks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装ShadowSocks客户端"><span class="toc-text">安装ShadowSocks客户端</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#购买VPS服务器"><span class="toc-text">购买VPS服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置VPS服务器"><span class="toc-text">配置VPS服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装ShadowSocks"><span class="toc-text">安装ShadowSocks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装ShadowSocks客户端"><span class="toc-text">安装ShadowSocks客户端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试VPS网速"><span class="toc-text">测试VPS网速</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化VPS网速"><span class="toc-text">优化VPS网速</span></a></li></ol>
     </div>
   </aside>
 
