@@ -377,6 +377,22 @@
   <i id="com-switch" class="iconfont icon-more jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
   <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
     
+<!-- Gitment Comments -->
+<div id="gitment"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: "yinshangwei",
+  repo: 'https://github.com/yinshangwei/yinshangwei.github.io',
+  oauth: {
+    client_id: '2bbcfabba132620b5040',
+    client_secret: '1f9b388ed932917d6fde6b7b4e8af77febcb7a34',
+  },
+})
+gitment.render('gitment')
+</script>
+
     
     
 
